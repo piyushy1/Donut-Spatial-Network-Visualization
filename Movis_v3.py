@@ -298,6 +298,7 @@ def map_color_code(data,normalise_color_code):
     colors = ['#EDEDED', '#D3D3D3', '#ABABAB', '#4D4D4D', '#171717']
     if data in normalise_color_code.keys():
         value = normalise_color_code[data]
+        value = round(value, 2)
         if value <= 0.20:
             return colors[0]
         if 0.21 <= value <= 0.40:
