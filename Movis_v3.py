@@ -219,8 +219,11 @@ def create_vector_layer(points, bool_val):
 # function to get bounding box of layer extent
 def get_polygon_directons():
     #layer = iface.mapCanvas()
-    layer = iface.activeLayer() # load the layer as you want
-    ext = layer.extent()
+    #layer = iface.activeLayer() # load the layer as you want
+    #ext = layer.extent()
+    ext = iface.mapCanvas().extent()
+    request = QgsFeatureRequest()
+    request.setFilterRect(ext)
     #print(ext)
     center = ext.center()
     x_center = ext.center().x()
