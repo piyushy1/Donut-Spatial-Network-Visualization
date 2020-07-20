@@ -221,7 +221,7 @@ def get_polygon_directons():
     #layer = iface.mapCanvas()
     #layer = iface.activeLayer() # load the layer as you want
     #ext = layer.extent()
-    ext = iface.mapCanvas().extent()
+    ext = iface.activeLayer().extent()
     request = QgsFeatureRequest()
     request.setFilterRect(ext)
     #print(ext)
